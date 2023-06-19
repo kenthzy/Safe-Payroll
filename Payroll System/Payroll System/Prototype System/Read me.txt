@@ -1,0 +1,11 @@
+Kenneth Gonzales BSCPE 1-C
+
+Instructions
+
+Step 1: Download and install XAMMP and Visual Studio.
+Step 2: Open XAMMP Control Panel and run or start "Apache" and "MySQL".
+Step 3: Click "Admin" button in "MySQL".
+Step 4: Create database with a name of "dbsafe".
+Step 5: Click "dbsafe" and import the database file.
+Step 6: Open "Visual Studio Software".
+Step 7: That's it, you can run and use the system.
