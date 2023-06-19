@@ -32,7 +32,7 @@ Partial Class Login
         Me.TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
-        Me.TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TextBox13 = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -178,32 +178,32 @@ Partial Class Login
         Me.CheckBox1.UseCompatibleTextRendering = True
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'TextBox13
         '
-        Me.TextBox1.Animated = True
-        Me.TextBox1.AutoRoundedCorners = True
-        Me.TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.TextBox1.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.TextBox1.BorderRadius = 20
-        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TextBox1.DefaultText = ""
-        Me.TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 10.2!)
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(84, 190)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TextBox1.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.TextBox1.PlaceholderText = "Username"
-        Me.TextBox1.SelectedText = ""
-        Me.TextBox1.Size = New System.Drawing.Size(345, 43)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBox13.Animated = True
+        Me.TextBox13.AutoRoundedCorners = True
+        Me.TextBox13.BackColor = System.Drawing.Color.Transparent
+        Me.TextBox13.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.TextBox13.BorderRadius = 20
+        Me.TextBox13.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TextBox13.DefaultText = ""
+        Me.TextBox13.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TextBox13.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TextBox13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TextBox13.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TextBox13.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TextBox13.Font = New System.Drawing.Font("Century Gothic", 10.2!)
+        Me.TextBox13.ForeColor = System.Drawing.Color.Black
+        Me.TextBox13.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TextBox13.Location = New System.Drawing.Point(84, 190)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TextBox13.PlaceholderForeColor = System.Drawing.Color.Silver
+        Me.TextBox13.PlaceholderText = "Username"
+        Me.TextBox13.SelectedText = ""
+        Me.TextBox13.Size = New System.Drawing.Size(345, 43)
+        Me.TextBox13.TabIndex = 0
         '
         'Login
         '
@@ -220,7 +220,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox13)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
@@ -242,5 +242,5 @@ Partial Class Login
     Friend WithEvents TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
-    Friend WithEvents TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents TextBox13 As Guna.UI2.WinForms.Guna2TextBox
 End Class

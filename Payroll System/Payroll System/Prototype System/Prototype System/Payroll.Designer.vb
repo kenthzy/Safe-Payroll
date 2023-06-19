@@ -154,7 +154,7 @@ Partial Class Payroll
         Me.name1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.name1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.name1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.name1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.name1.Font = New System.Drawing.Font("Century Gothic", 9.0!)
         Me.name1.ForeColor = System.Drawing.Color.Black
         Me.name1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.name1.Location = New System.Drawing.Point(21, 128)
@@ -162,7 +162,7 @@ Partial Class Payroll
         Me.name1.Name = "name1"
         Me.name1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.name1.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.name1.PlaceholderText = "Working Days"
+        Me.name1.PlaceholderText = "Name"
         Me.name1.SelectedText = ""
         Me.name1.Size = New System.Drawing.Size(250, 33)
         Me.name1.TabIndex = 25
@@ -187,7 +187,7 @@ Partial Class Payroll
         Me.empid1.Name = "empid1"
         Me.empid1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.empid1.PlaceholderForeColor = System.Drawing.Color.Silver
-        Me.empid1.PlaceholderText = "Working Days"
+        Me.empid1.PlaceholderText = "Employee ID"
         Me.empid1.SelectedText = ""
         Me.empid1.Size = New System.Drawing.Size(250, 33)
         Me.empid1.TabIndex = 24

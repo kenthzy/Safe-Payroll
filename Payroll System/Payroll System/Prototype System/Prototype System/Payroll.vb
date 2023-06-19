@@ -30,14 +30,17 @@ Public Class Payroll
 
     Private Sub btnCompute_Click(sender As Object, e As EventArgs) Handles btnCompute.Click
         'declare variables and get input values
-        Dim positionSalary As Double 'initialize variable for position-based salary
-        Dim position As String = position1.SelectedItem.ToString() 'get selected position from ComboBox
-        Dim monthlySalary As Double = CDbl(salary1.SelectedItem.ToString()) 'get monthly salary from ComboBox
+
+
+        Dim monthlySalary As Double = Convert.ToDouble(salary1.SelectedItem.ToString())
         Dim workdays As Integer = CInt(txtWorkdays.Text) 'get number of work days from TextBox
         Dim sssDeduction, pagIbigDeduction, philHealthDeduction, tax As Double 'initialize variables for deductions
         Dim totalDeductions, netSalary As Double 'initialize variables for total deductions and net salary
 
-        'get position-based salary
+        ' Get selected position from ComboBox
+        Dim position As String = position1.SelectedItem.ToString()
+        ' Calculate position-based salary
+        Dim positionSalary As Double = 0.0
         Select Case position
             Case "CEO"
                 positionSalary = 180000
@@ -54,66 +57,90 @@ Public Class Payroll
             Case "Maintenance"
                 positionSalary = 10000
         End Select
-
-        'calculate deductions
+        ' Calculate deductions
         If monthlySalary <= 35000 Then
-            sssDeduction = monthlySalary * 0.045 'compute SSS deduction as 4.5% of monthly salary
+            sssDeduction = monthlySalary * 0.045 ' Compute SSS deduction as 4.5% of monthly salary
         Else
-            sssDeduction = 1575 'set maximum SSS contribution for employee
+            sssDeduction = 1575 ' Set maximum SSS contribution for employee
         End If
-        pagIbigDeduction = monthlySalary * 0.01 'compute Pag-IBIG deduction as 1% of monthly salary
-        philHealthDeduction = monthlySalary * 0.015 'compute PhilHealth deduction as 1.5% of monthly salary
+
+        ' Calculate net salary
+        If workdays < 24 Then
+            ' Calculate deductions for incomplete work days
+            Dim dailySalary As Double = positionSalary / 4 ' Calculate daily salary based on position-based salary
+            Dim incompleteDays As Integer = 24 - workdays ' Calculate the number of incomplete work days
+            Dim incompleteSalary As Double = dailySalary * incompleteDays ' Calculate the salary deduction for incomplete work days
+
+            netSalary = monthlySalary - totalDeductions - incompleteSalary ' Subtract deductions and incomplete salary from the monthly salary
+        Else
+            netSalary = monthlySalary - totalDeductions ' Subtract total deductions from the monthly salary
+        End If
+
+
+        pagIbigDeduction = monthlySalary * 0.01 ' Compute Pag-IBIG deduction as 1% of monthly salary
+        philHealthDeduction = monthlySalary * 0.015 ' Compute PhilHealth deduction as 1.5% of monthly salary
+
         If monthlySalary * 12 <= 250000 Then
-            tax = 0 'no tax for annual income below or equal to PHP 250,000
+            tax = 0 ' No tax for annual income below or equal to PHP 250,000
         Else
-            'calculate tax using the tax table
-            Dim annualIncome As Double = monthlySalary * 12 'compute annual income based on monthly salary
-            Dim taxableIncome As Double = annualIncome - (sssDeduction * 12) - (pagIbigDeduction * 12) - (philHealthDeduction * 12) - 250000 'compute taxable income
-            If taxableIncome <= 150000 Then
-                tax = taxableIncome * 0.15 'compute tax as 15% of taxable income
-            ElseIf taxableIncome <= 400000 Then
-                tax = 22500 + ((taxableIncome - 150000) * 0.2) 'compute tax using the tax bracket for PHP 150,001 to 400,000
+            ' Calculate tax using the revised tax criteria
+            ' Calculate tax using the revised tax criteria
+            Dim annualIncome As Double = monthlySalary * 12 ' Compute annual income based on monthly salary
+            Dim taxableIncome As Double = annualIncome - (sssDeduction * 12) - (pagIbigDeduction * 12) - (philHealthDeduction * 12) ' Compute taxable income after deducting mandatory contributions
+
+            Dim maxTaxPercentage As Double = 0.3 ' Maximum tax percentage (30% in this example)
+            Dim maxTaxDeduction As Double = monthlySalary * maxTaxPercentage ' Maximum tax deduction based on the monthly salary
+
+            If taxableIncome <= 400000 Then
+                tax = Math.Min(taxableIncome * 0.15, maxTaxDeduction) ' Compute tax as 15% of taxable income or maximum tax deduction, whichever is lower
             ElseIf taxableIncome <= 550000 Then
-                tax = 62500 + ((taxableIncome - 400000) * 0.25) 'compute tax using the tax bracket for PHP 400,001 to 550,000
+                tax = Math.Min(22500 + ((taxableIncome - 400000) * 0.2), maxTaxDeduction) ' Compute tax using the tax bracket for PHP 400,001 to 550,000 or maximum tax deduction, whichever is lower
             Else
-                tax = 100000 + ((taxableIncome - 550000) * 0.3) 'compute tax using the tax bracket for PHP 550,001 and above
+                ' Compute tax for higher income brackets with additional 5% tax for every additional PHP 150,000, limited by the maximum tax deduction
+                Dim additionalIncome As Double = taxableIncome - 550000
+                Dim additionalTax As Double = Math.Ceiling(additionalIncome / 150000) * 5
+                tax = Math.Min(62500 + ((taxableIncome - 400000) * 0.2) + additionalTax, maxTaxDeduction)
             End If
+
         End If
-        totalDeductions = sssDeduction + pagIbigDeduction + philHealthDeduction + tax 'compute total deductions
+
+        totalDeductions = sssDeduction + pagIbigDeduction + philHealthDeduction + tax ' Compute total deductions
 
         'calculate net salary
-        netSalary = ((positionSalary / 4) * workdays) - totalDeductions 'compute net salary based on position-based salary, work days, and total deductions
+        netSalary = ((positionSalary / 4) * workdays) - totalDeductions
+        'compute net salary based on position-based salary, work days, and total deductions
 
-        'format output as a string
-        Dim output As String = "" & vbCrLf
+        ' Calculate net salary
+        netSalary = monthlySalary - totalDeductions
+
+        ' Format output as a string
+        Dim output As String = ""
         output &= "" & vbCrLf
-        output &= "" & vbCrLf
-        output &= "" & vbCrLf
-        output &= "----------------------" & vbCrLf
+        output &= "   SAFE PAYROLL" & vbCrLf
+        output &= "--------------------------" & vbCrLf
         output &= "EMPLOYEE PAYCHECK SUMMARY" & vbCrLf
-        output &= "----------------------" & vbCrLf
+        output &= "--------------------------" & vbCrLf
         output &= "Position: " & position & vbCrLf
-        output &= "Salary: PHP " & Format(positionSalary, "0.00") & " per month" & vbCrLf
+        output &= "Salary: PHP " & Format(monthlySalary, "0.00") & " per month" & vbCrLf
         output &= "Work days: " & workdays & vbCrLf
-        output &= "----------------------" & vbCrLf
+        output &= "--------------------------" & vbCrLf
         output &= "DEDUCTIONS" & vbCrLf
-        output &= "----------------------" & vbCrLf
+        output &= "--------------------------" & vbCrLf
         output &= "SSS: PHP " & Format(sssDeduction, "0.00") & vbCrLf
         output &= "Pag-IBIG: PHP " & Format(pagIbigDeduction, "0.00") & vbCrLf
         output &= "PhilHealth: PHP " & Format(philHealthDeduction, "0.00") & vbCrLf
-        output &= "Tax: PHP " & Format(tax, "0.00") & vbCrLf 'add tax deduction to the output string
-        output &= "----------------------" & vbCrLf
-        output &= "TOTAL DEDUCTIONS: PHP " & Format(totalDeductions, "0.00") & vbCrLf 'add total deductions to the output string
-        output &= "----------------------" & vbCrLf
-        output &= "NET SALARY: PHP " & Format(netSalary, "0.00") & vbCrLf 'add net salary to the output string
-        output &= "----------------------"
+        output &= "Tax: PHP " & Format(tax, "0.00") & vbCrLf
+        output &= "--------------------------" & vbCrLf
+        output &= "TOTAL DEDUCTIONS: PHP " & Format(totalDeductions, "0.00") & vbCrLf
+        output &= "--------------------------" & vbCrLf
+        output &= "NET SALARY: PHP " & Format(netSalary, "0.00") & vbCrLf
+        output &= "--------------------------"
 
-        'display output in TextBox2
-        TextBox2.Text = output 'display the output string in TextBox2
-        TextBox2.TextAlign = HorizontalAlignment.Center 'set the text alignment to center
-        TextBox2.Font = New Font("Courier New", 10) 'set the font of the text to Courier New with a size of 10
-        TextBox2.SelectionStart = TextBox2.TextLength 'set the selection start to the end of the text
-        TextBox2.ScrollToCaret() 'scroll to the end of the text
+        TextBox2.Text = output
+        TextBox2.TextAlign = HorizontalAlignment.Center
+        TextBox2.Font = New Font("Courier New", 10)
+        TextBox2.SelectionStart = TextBox2.TextLength
+        TextBox2.ScrollToCaret()
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
