@@ -38,9 +38,7 @@ Partial Class Login
         '
         'Button1
         '
-        Me.Button1.AutoRoundedCorners = True
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BorderRadius = 18
         Me.Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -115,11 +113,8 @@ Partial Class Login
         '
         'TextBox2
         '
-        Me.TextBox2.Animated = True
-        Me.TextBox2.AutoRoundedCorners = True
         Me.TextBox2.BackColor = System.Drawing.Color.Transparent
         Me.TextBox2.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.TextBox2.BorderRadius = 20
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.WaitCursor
         Me.TextBox2.DefaultText = ""
         Me.TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -180,11 +175,8 @@ Partial Class Login
         '
         'TextBox13
         '
-        Me.TextBox13.Animated = True
-        Me.TextBox13.AutoRoundedCorners = True
         Me.TextBox13.BackColor = System.Drawing.Color.Transparent
         Me.TextBox13.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.TextBox13.BorderRadius = 20
         Me.TextBox13.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TextBox13.DefaultText = ""
         Me.TextBox13.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
