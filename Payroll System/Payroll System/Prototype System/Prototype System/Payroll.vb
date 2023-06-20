@@ -212,4 +212,5 @@ Public Class Payroll
         ' If all the lines have been printed, set HasMorePages to False to indicate that printing is complete
         e.HasMorePages = False
     End Sub
+
 End Class
