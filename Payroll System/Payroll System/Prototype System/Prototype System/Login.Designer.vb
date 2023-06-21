@@ -26,13 +26,13 @@ Partial Class Login
         Me.Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.TextBox13 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,18 +75,6 @@ Partial Class Login
         Me.Label4.Size = New System.Drawing.Size(133, 20)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "No Account Yet?"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label5.Location = New System.Drawing.Point(445, 560)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 20)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Ver. 0.1"
         '
         'Label6
         '
@@ -197,6 +185,18 @@ Partial Class Login
         Me.TextBox13.Size = New System.Drawing.Size(345, 43)
         Me.TextBox13.TabIndex = 0
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label1.Location = New System.Drawing.Point(274, 563)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(239, 20)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "TRUSTED PAYROLL SYSTEM Ver 0.1"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -205,10 +205,10 @@ Partial Class Login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(513, 585)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -228,11 +228,11 @@ Partial Class Login
     Friend WithEvents Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents CheckBox1 As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents TextBox13 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label1 As Label
 End Class

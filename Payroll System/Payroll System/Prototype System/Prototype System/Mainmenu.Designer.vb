@@ -26,7 +26,6 @@ Partial Class Mainmenu
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.salary1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btnNew = New Guna.UI2.WinForms.Guna2Button()
         Me.gender1 = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -36,7 +35,6 @@ Partial Class Mainmenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.bttnInsert = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnReload = New Guna.UI2.WinForms.Guna2Button()
         Me.empid1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.name1 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -48,33 +46,11 @@ Partial Class Mainmenu
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Guna2CustomGradientPanel1.SuspendLayout()
+        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DTGLIST, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2CustomGradientPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Guna2CustomGradientPanel1
-        '
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.salary1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnNew)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.gender1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.position1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnDelete)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnUpdate)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Label1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Guna2CirclePictureBox1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.bttnInsert)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Label3)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnReload)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.empid1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.name1)
-        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DodgerBlue
-        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.DodgerBlue
-        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.DodgerBlue
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(-8, -8)
-        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(362, 695)
-        Me.Guna2CustomGradientPanel1.TabIndex = 9
         '
         'salary1
         '
@@ -89,7 +65,7 @@ Partial Class Mainmenu
         Me.salary1.ForeColor = System.Drawing.Color.Black
         Me.salary1.ItemHeight = 30
         Me.salary1.Items.AddRange(New Object() {"180,000.00", "120,000.00", "60,000.00", "40,000.00", "25,000.00", "15,000.00", "10,000.00"})
-        Me.salary1.Location = New System.Drawing.Point(33, 305)
+        Me.salary1.Location = New System.Drawing.Point(15, 331)
         Me.salary1.Name = "salary1"
         Me.salary1.Size = New System.Drawing.Size(301, 36)
         Me.salary1.TabIndex = 19
@@ -106,7 +82,7 @@ Partial Class Mainmenu
         Me.btnNew.FillColor = System.Drawing.Color.RoyalBlue
         Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnNew.ForeColor = System.Drawing.Color.White
-        Me.btnNew.Location = New System.Drawing.Point(181, 414)
+        Me.btnNew.Location = New System.Drawing.Point(30, 465)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(134, 39)
         Me.btnNew.TabIndex = 18
@@ -125,7 +101,7 @@ Partial Class Mainmenu
         Me.gender1.ForeColor = System.Drawing.Color.Black
         Me.gender1.ItemHeight = 30
         Me.gender1.Items.AddRange(New Object() {"MALE", "FEMALE"})
-        Me.gender1.Location = New System.Drawing.Point(33, 252)
+        Me.gender1.Location = New System.Drawing.Point(13, 275)
         Me.gender1.Name = "gender1"
         Me.gender1.Size = New System.Drawing.Size(301, 36)
         Me.gender1.TabIndex = 17
@@ -143,7 +119,7 @@ Partial Class Mainmenu
         Me.position1.ForeColor = System.Drawing.Color.Black
         Me.position1.ItemHeight = 30
         Me.position1.Items.AddRange(New Object() {"CEO", "DIRECTOR", "MANAGER", "TEAM LEAD", "REGULAR", "SECURITY", "MAINTENANCE"})
-        Me.position1.Location = New System.Drawing.Point(33, 199)
+        Me.position1.Location = New System.Drawing.Point(15, 213)
         Me.position1.Name = "position1"
         Me.position1.Size = New System.Drawing.Size(301, 36)
         Me.position1.TabIndex = 16
@@ -160,7 +136,7 @@ Partial Class Mainmenu
         Me.btnDelete.FillColor = System.Drawing.Color.RoyalBlue
         Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnDelete.ForeColor = System.Drawing.Color.White
-        Me.btnDelete.Location = New System.Drawing.Point(181, 358)
+        Me.btnDelete.Location = New System.Drawing.Point(170, 403)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(134, 39)
         Me.btnDelete.TabIndex = 15
@@ -178,7 +154,7 @@ Partial Class Mainmenu
         Me.btnUpdate.FillColor = System.Drawing.Color.RoyalBlue
         Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(41, 414)
+        Me.btnUpdate.Location = New System.Drawing.Point(30, 403)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(134, 39)
         Me.btnUpdate.TabIndex = 15
@@ -190,7 +166,7 @@ Partial Class Mainmenu
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(44, 33)
+        Me.Label1.Location = New System.Drawing.Point(52, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(252, 23)
         Me.Label1.TabIndex = 14
@@ -201,10 +177,10 @@ Partial Class Mainmenu
         Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2CirclePictureBox1.Image = CType(resources.GetObject("Guna2CirclePictureBox1.Image"), System.Drawing.Image)
         Me.Guna2CirclePictureBox1.ImageRotate = 0!
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(108, 542)
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(909, 12)
         Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
         Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(128, 102)
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(77, 78)
         Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2CirclePictureBox1.TabIndex = 11
         Me.Guna2CirclePictureBox1.TabStop = False
@@ -221,29 +197,15 @@ Partial Class Mainmenu
         Me.bttnInsert.FillColor = System.Drawing.Color.RoyalBlue
         Me.bttnInsert.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.bttnInsert.ForeColor = System.Drawing.Color.White
-        Me.bttnInsert.Location = New System.Drawing.Point(41, 358)
+        Me.bttnInsert.Location = New System.Drawing.Point(170, 465)
         Me.bttnInsert.Name = "bttnInsert"
         Me.bttnInsert.Size = New System.Drawing.Size(134, 39)
         Me.bttnInsert.TabIndex = 13
         Me.bttnInsert.Text = "Insert"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(57, 650)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(239, 20)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "TRUSTED PAYROLL SYSTEM Ver 0.1"
-        '
         'btnReload
         '
-        Me.btnReload.AutoRoundedCorners = True
         Me.btnReload.BackColor = System.Drawing.Color.Transparent
-        Me.btnReload.BorderRadius = 18
         Me.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -251,9 +213,9 @@ Partial Class Mainmenu
         Me.btnReload.FillColor = System.Drawing.Color.RoyalBlue
         Me.btnReload.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnReload.ForeColor = System.Drawing.Color.White
-        Me.btnReload.Location = New System.Drawing.Point(108, 474)
+        Me.btnReload.Location = New System.Drawing.Point(401, 605)
         Me.btnReload.Name = "btnReload"
-        Me.btnReload.Size = New System.Drawing.Size(134, 39)
+        Me.btnReload.Size = New System.Drawing.Size(1032, 39)
         Me.btnReload.TabIndex = 13
         Me.btnReload.Text = "Reload"
         '
@@ -274,7 +236,7 @@ Partial Class Mainmenu
         Me.empid1.Font = New System.Drawing.Font("Century Gothic", 10.2!)
         Me.empid1.ForeColor = System.Drawing.Color.Black
         Me.empid1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.empid1.Location = New System.Drawing.Point(31, 78)
+        Me.empid1.Location = New System.Drawing.Point(13, 92)
         Me.empid1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.empid1.Name = "empid1"
         Me.empid1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -301,7 +263,7 @@ Partial Class Mainmenu
         Me.name1.Font = New System.Drawing.Font("Century Gothic", 10.2!)
         Me.name1.ForeColor = System.Drawing.Color.Black
         Me.name1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.name1.Location = New System.Drawing.Point(33, 136)
+        Me.name1.Location = New System.Drawing.Point(15, 150)
         Me.name1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.name1.Name = "name1"
         Me.name1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -313,37 +275,41 @@ Partial Class Mainmenu
         '
         'btnCredits
         '
+        Me.btnCredits.AutoRoundedCorners = True
         Me.btnCredits.BackColor = System.Drawing.Color.Transparent
         Me.btnCredits.BorderColor = System.Drawing.Color.RoyalBlue
+        Me.btnCredits.BorderRadius = 18
         Me.btnCredits.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnCredits.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnCredits.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnCredits.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCredits.FillColor = System.Drawing.Color.Transparent
+        Me.btnCredits.FillColor = System.Drawing.Color.DeepSkyBlue
         Me.btnCredits.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnCredits.ForeColor = System.Drawing.Color.White
-        Me.btnCredits.Location = New System.Drawing.Point(764, 25)
+        Me.btnCredits.Location = New System.Drawing.Point(66, 592)
         Me.btnCredits.Name = "btnCredits"
-        Me.btnCredits.Size = New System.Drawing.Size(354, 39)
+        Me.btnCredits.Size = New System.Drawing.Size(195, 39)
         Me.btnCredits.TabIndex = 14
-        Me.btnCredits.Text = "SAFE PAYROLL SYSTEM"
+        Me.btnCredits.Text = "Credits"
         '
         'btnPayroll
         '
+        Me.btnPayroll.AutoRoundedCorners = True
         Me.btnPayroll.BackColor = System.Drawing.Color.Transparent
         Me.btnPayroll.BorderColor = System.Drawing.Color.RoyalBlue
+        Me.btnPayroll.BorderRadius = 18
         Me.btnPayroll.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnPayroll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnPayroll.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnPayroll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnPayroll.FillColor = System.Drawing.Color.RoyalBlue
+        Me.btnPayroll.FillColor = System.Drawing.Color.DeepSkyBlue
         Me.btnPayroll.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnPayroll.ForeColor = System.Drawing.Color.White
-        Me.btnPayroll.Location = New System.Drawing.Point(399, 571)
+        Me.btnPayroll.Location = New System.Drawing.Point(66, 530)
         Me.btnPayroll.Name = "btnPayroll"
-        Me.btnPayroll.Size = New System.Drawing.Size(1032, 39)
+        Me.btnPayroll.Size = New System.Drawing.Size(195, 39)
         Me.btnPayroll.TabIndex = 15
-        Me.btnPayroll.Text = "GO TO PAYROLL"
+        Me.btnPayroll.Text = "Payroll"
         '
         'DTGLIST
         '
@@ -369,7 +335,7 @@ Partial Class Mainmenu
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DTGLIST.DefaultCellStyle = DataGridViewCellStyle3
         Me.DTGLIST.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DTGLIST.Location = New System.Drawing.Point(399, 70)
+        Me.DTGLIST.Location = New System.Drawing.Point(401, 105)
         Me.DTGLIST.Name = "DTGLIST"
         Me.DTGLIST.RowHeadersVisible = False
         Me.DTGLIST.RowHeadersWidth = 51
@@ -433,6 +399,28 @@ Partial Class Mainmenu
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
         '
+        'Guna2CustomGradientPanel1
+        '
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.empid1)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnCredits)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnPayroll)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.salary1)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.bttnInsert)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnUpdate)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Label1)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnNew)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.btnDelete)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.name1)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.gender1)
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.position1)
+        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.SteelBlue
+        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.SteelBlue
+        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.SteelBlue
+        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(0, -2)
+        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
+        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(359, 681)
+        Me.Guna2CustomGradientPanel1.TabIndex = 20
+        '
         'Mainmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -441,24 +429,22 @@ Partial Class Mainmenu
         Me.BackgroundImage = Global.Prototype_System.My.Resources.Resources.R__1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1460, 671)
-        Me.Controls.Add(Me.btnPayroll)
-        Me.Controls.Add(Me.DTGLIST)
-        Me.Controls.Add(Me.btnCredits)
         Me.Controls.Add(Me.Guna2CustomGradientPanel1)
+        Me.Controls.Add(Me.btnReload)
+        Me.Controls.Add(Me.DTGLIST)
+        Me.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Mainmenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Guna2CustomGradientPanel1.ResumeLayout(False)
-        Me.Guna2CustomGradientPanel1.PerformLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DTGLIST, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2CustomGradientPanel1.ResumeLayout(False)
+        Me.Guna2CustomGradientPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
-    Friend WithEvents Label3 As Label
     Friend WithEvents name1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents empid1 As Guna.UI2.WinForms.Guna2TextBox
@@ -479,4 +465,5 @@ Partial Class Mainmenu
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
 End Class

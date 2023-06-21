@@ -28,6 +28,7 @@ Partial Class Portal
         Me.Guna2CirclePictureBox2 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnPayroll = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -111,6 +112,18 @@ Partial Class Portal
         Me.btnPayroll.TabIndex = 16
         Me.btnPayroll.Text = "PAYROLL"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(271, 561)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(239, 20)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "TRUSTED PAYROLL SYSTEM Ver 0.1"
+        '
         'Portal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -119,6 +132,7 @@ Partial Class Portal
         Me.BackgroundImage = Global.Prototype_System.My.Resources.Resources.R__1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(513, 585)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnPayroll)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Guna2CirclePictureBox2)
@@ -141,4 +155,5 @@ Partial Class Portal
     Friend WithEvents Guna2CirclePictureBox2 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnPayroll As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Label3 As Label
 End Class
