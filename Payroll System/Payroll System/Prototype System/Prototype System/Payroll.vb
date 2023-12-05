@@ -213,4 +213,7 @@ Public Class Payroll
         e.HasMorePages = False
     End Sub
 
+    Private Sub Payroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnRefresh.PerformClick()
+    End Sub
 End Class
