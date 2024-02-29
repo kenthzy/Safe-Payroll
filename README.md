@@ -76,15 +76,8 @@ However, there were concerns about the accuracy of calculations based on the spe
 
 Overall, the project provided valuable learning experiences in database management, computation implementation, and user interface design, highlighting the importance of testing and validation for a reliable system
 
-ii.	Acknowledgments:
-Leader:
+### ii.	Acknowledgments:
 Kenneth Jearl S. Gonzales
-Members:
-Justin Felizario
-Jaybie Amasan
-Tabiola Arter
-Tamayo Princess Iaci
-Sean Michael Huan
 
-## Watch here
+### Watch here
 https://youtu.be/aBriBqVi150?si=AtnsGvc93pR9DF57
